@@ -39,7 +39,26 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "57026a66-8336-4616-befa-e32328e432af",
+        "testCaseType": "TestCase",
+        "fileName": "Tests\\TestCase_ExtractResults.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "37291ba8-95ce-4d72-a3af-98668512b62f",
+        "testCaseType": "TestCase",
+        "fileName": "Tests\\TestCase_Mobile_SelectFilters.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "7139ab1d-8c9f-4278-bef9-fffa8489dbc5",
+        "testCaseType": "TestCase",
+        "fileName": "Tests\\TestCase_FilterResults.xaml"
+      }
+    ],
     "modernBehavior": false
   },
   "expressionLanguage": "VisualBasic",
