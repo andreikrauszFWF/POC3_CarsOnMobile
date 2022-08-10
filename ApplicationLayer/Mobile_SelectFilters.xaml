@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1206,4704</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1206,4749.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Mobile_SelectFilters_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="28">
@@ -70,7 +70,7 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Workflow to select specific filters , filters given from the config file." DisplayName="Mobile_SelectFilters" sap:VirtualizedContainerService.HintSize="680.666666666667,4639.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Workflow to go to Mobile search page and aplly specific filters to the Mobile search page,, then press &quot;show results&quot; button." DisplayName="Workflow to apply specififed filters" sap:VirtualizedContainerService.HintSize="680.666666666667,4684.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -78,13 +78,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message to mark the start of workflow" sap:VirtualizedContainerService.HintSize="638.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Mobile_SelectFilters workflow has started&quot;]" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Edge browser on mobile.de english home page" sap:VirtualizedContainerService.HintSize="638.666666666667,4247.33333333333" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="61fb60bab83b5d72337352d46e66e681" Selector="&lt;html app='msedge.exe' title='https://www.mobile.de*' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Edge browser on mobile.de english home page" sap:VirtualizedContainerService.HintSize="638.666666666667,4278" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="61fb60bab83b5d72337352d46e66e681" Selector="&lt;html app='msedge.exe' title='https://www.mobile.de*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Select filters" sap:VirtualizedContainerService.HintSize="604.666666666667,4148.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Select filters" sap:VirtualizedContainerService.HintSize="604.666666666667,4132" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="car_id" />
               <Variable x:TypeArguments="x:String" Name="emissionSticker" />
@@ -124,13 +124,13 @@
                 <InArgument x:TypeArguments="x:Int32">1</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each make in config file" sap:VirtualizedContainerService.HintSize="562.666666666667,1180.66666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[in_config(&quot;carMake&quot;).ToString.Split(&quot;,&quot;c)]">
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each make in config file" sap:VirtualizedContainerService.HintSize="562.666666666667,1174" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[in_config(&quot;carMake&quot;).ToString.Split(&quot;,&quot;c)]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="make" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Click on &quot;make&quot; button and type name into" sap:VirtualizedContainerService.HintSize="526,1052.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Click on &quot;make&quot; button and type name into" sap:VirtualizedContainerService.HintSize="526,1049.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Boolean" Name="addButtonExists" />
                     </Sequence.Variables>
@@ -193,9 +193,9 @@
                         </ui:Target>
                       </ui:UiElementExists.Target>
                     </ui:UiElementExists>
-                    <If Condition="[addButtonExists]" DisplayName="If add button is available" sap:VirtualizedContainerService.HintSize="484,392.666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[addButtonExists]" DisplayName="If add button is available" sap:VirtualizedContainerService.HintSize="484,389.333333333333" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <Sequence DisplayName="Sequence to click on &quot;add other vehicle&quot;" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_9">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -247,7 +247,7 @@
                 <InArgument x:TypeArguments="x:Int32">1</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each model in config file" sap:VirtualizedContainerService.HintSize="562.666666666667,602" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[in_config(&quot;carModel&quot;).ToString.Split(&quot;,&quot;c)]">
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each model in config file" sap:VirtualizedContainerService.HintSize="562.666666666667,598.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[in_config(&quot;carModel&quot;).ToString.Split(&quot;,&quot;c)]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -305,13 +305,13 @@
                 </ActivityAction>
               </ui:ForEach.Body>
             </ui:ForEach>
-            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each car type in the config file" sap:VirtualizedContainerService.HintSize="562.666666666667,428" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[in_config(&quot;carType&quot;).ToString.Split(&quot;,&quot;c)]">
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each car type in the config file" sap:VirtualizedContainerService.HintSize="562.666666666667,424.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[in_config(&quot;carType&quot;).ToString.Split(&quot;,&quot;c)]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="type" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,300" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Sequence to click on the wanted car types to be selected" sap:VirtualizedContainerService.HintSize="376,300" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="carType" />
                     </Sequence.Variables>
@@ -366,13 +366,13 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each fuel type in config file" sap:VirtualizedContainerService.HintSize="562.666666666667,428" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[in_config(&quot;fuelType&quot;).ToString.Split(&quot;,&quot;c)]">
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each fuel type in config file" sap:VirtualizedContainerService.HintSize="562.666666666667,424.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[in_config(&quot;fuelType&quot;).ToString.Split(&quot;,&quot;c)]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="fuel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,300" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence DisplayName="Select the wanted fuel type" sap:VirtualizedContainerService.HintSize="376,300" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="fuelType" />
                     </Sequence.Variables>
